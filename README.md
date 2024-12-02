@@ -8,12 +8,12 @@ Este proyecto es una aplicación de consola que permite gestionar el conteo de p
    git clone  https://github.com/Mr-Delling/Papeletas.git
 
 ## Estructura del proyecto
-src/n
-├── aplicacion/n
+src
+├── aplicacion
 │   └── Main.java
 ├── dominio/
-│   ├── Candidato.java/n
-│   ├── Eleccion.java/n
-│   └── Papeleta.java/n
-└── presentacion/n
+│   ├── Candidato.java
+│   ├── Eleccion.java
+│   └── Papeleta.java
+└── presentacion
     └── SistemaElecciones.java
