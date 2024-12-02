@@ -5,16 +5,15 @@ Este proyecto es una aplicación de consola que permite gestionar el conteo de p
 ## Instalación
 1. Clona el repositorio:
    ```bash
-   git clone  
+   git clone  https://github.com/Mr-Delling/Papeletas.git
 
 ## Estructura del proyecto
 src/
 ├── aplicacion/
 │   └── Main.java
 ├── dominio/
-│   ├── Producto.java
-│   ├── Catalogo.java
-│   ├── Persistencia.java
-│   └── Validaciones.java
+│   ├── Candidato.java
+│   ├── Eleccion.java
+│   └── Papeleta.java
 └── presentacion/
-    └── ICatalogo.java
+    └── SistemaElecciones.java
