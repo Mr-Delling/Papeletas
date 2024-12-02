@@ -16,4 +16,4 @@ src <br>
 │   ├── Eleccion.java <br>
 │   └── Papeleta.java <br>
 └── presentacion <br>
-   └── SistemaElecciones.java <br>
+.   └── SistemaElecciones.java <br>
