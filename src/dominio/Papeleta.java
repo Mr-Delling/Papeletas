@@ -1,7 +1,8 @@
 package dominio;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+import presentacion.Eleccion;
+import java.io.*;
 
 public class Papeleta {
     // Atributos
@@ -30,6 +31,26 @@ public class Papeleta {
             return false;
         }
     }
+    //Lectura de fichero lecturaCandidatos.csv linea por linea
+    
+    public static Papeleta lectura(String nombre) {
+        List <Candidato> candidatos = new ArrayList<>();
+        String rutaFichero = nombre+".csv";
+           
+        try {
+            Scanner scanner = new Scanner(new File(rutaFichero));
+            
+            while (scanner.hasNextLine()) {
+                int indiceCandidato = scanner.nextInt();
+                candidatos.add(Eleccion.getCandidato(indiceCandidato));
+            }
+            return new Papeleta(candidatos);
+        }catch (IOException e){
+            System.out.println("Error al leer el fichero");
+            return null;
+        }
+    }
+    
 
     // Getter para la lista de preferencias (opcional)
     public List<Candidato> getListaPreferencias() {
