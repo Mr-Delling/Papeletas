@@ -24,7 +24,7 @@ public class Candidato {
         this.nombre = nombre;
         return this;
     }
-    public int getVotos(){
+    public int getVotos() {
         return votos;
     }
     public Candidato setVotos(int votos) {
@@ -32,9 +32,17 @@ public class Candidato {
         return this;
     }
 
+
     //Métodos de Candidato:
     public Candidato incrementarVotos() {
         votos++;
         return this;
+    }
+    public Candidato resetVotos() {
+        votos = 0;
+        return this;
+    }
+    public String toString() {
+        return nombre;
     }
 }
