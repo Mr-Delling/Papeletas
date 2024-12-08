@@ -13,6 +13,7 @@ public class Candidato {
     //Constructores:
     public Candidato(String nombre) {
         this.nombre = nombre;
+        votos = 0;
     }
 
 
@@ -44,5 +45,11 @@ public class Candidato {
     }
     public String toString() {
         return nombre;
+    }
+    public boolean equals(Object object) {
+        if (object != null && object.getClass() == this.getClass()) {
+            return nombre.equalsIgnoreCase(((Candidato) object).getNombre());
+        }
+        else return false;
     }
 }

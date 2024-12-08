@@ -1,7 +1,11 @@
 package dominio;
 
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Papeleta {
     // Atributos
@@ -25,6 +29,11 @@ public class Papeleta {
     }
     public void setCandidatos(List<Candidato> candidatos) {
         this.candidatos = candidatos; // Actualiza la lista con una copia de la misma lista.
+    }
+    public String getNombre() {return nombre;}
+    public Papeleta setNombre(String nombre) {
+        this.nombre = nombre;
+        return this;
     }
 
 
@@ -57,10 +66,10 @@ public class Papeleta {
                 int indiceCandidato = scanner.nextInt();
                 candidatos.add(Eleccion.getCandidato(indiceCandidato));
             }
-            return new Papeleta(candidatos);
+            return new Papeleta(candidatos, nombre);
 
         } catch (IOException e) {
-            System.out.println("Error de lectura.");
+            System.out.println("Error de lectura de "+nombre+".");
             return null;
         }
     }
